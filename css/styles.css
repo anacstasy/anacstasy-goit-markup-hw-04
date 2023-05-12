@@ -134,12 +134,41 @@ button {
 
   color: var(--main-text-color);
 
-  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-link::after {
+  content: '';
+  display: none;
+
+  height: 4px;
+  background-color: #404bbf;
+  border-radius: 2px;
+
+  margin-top: 20px;
+}
+.menu-after-1::after {
+  width: 48px;
+}
+.menu-after-2::after {
+  width: 66px;
+}
+
+.menu-after-3::after {
+  width: 67px;
 }
 
 .menu-link:hover,
 .menu-link:focus {
   color: #404bbf;
+}
+.menu-link:hover::after,
+.menu-link:focus::after {
+  color: #404bbf;
+
+  display: block;
 }
 
 .menu-item:not(:last-child) {
@@ -187,6 +216,9 @@ button {
 .main {
   padding: 188px 0;
   background-color: var(--main-bg-color);
+  background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url(../images/people-office.jpg);
+  background-size: cover;
 }
 
 .hero-title {
@@ -278,6 +310,20 @@ button {
 
 .feature-content:not(:last-child) {
   margin-right: 24px;
+}
+.feature-content {
+  width: calc((100%-72px) / 4);
+}
+.feature-svg {
+  background-color: var(--secondary-bg-color);
+  width: 264px;
+  height: 112px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 /* section title 3-4 */
