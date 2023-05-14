@@ -67,6 +67,7 @@ button {
 
 .flex {
   display: flex;
+  align-items: baseline;
 }
 .main-header {
   display: flex;
@@ -412,11 +413,13 @@ button {
   justify-content: center;
   align-items: center;
   width: 40px;
-  height: 40px;
+  height: 100%;
   border-radius: 50%;
   margin-top: 8px;
 }
-
+.social-list-icon {
+  fill: var(--secondary-bg-color);
+}
 .social-list-link:hover,
 .social-list-link:focus {
   background-color: var(--pressed-state);
@@ -431,22 +434,23 @@ button {
   font-style: normal;
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 1.1;
 
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
   color: var(--main-text-color);
+  margin-bottom: 72px;
 }
 
 .client-list {
   display: flex;
   justify-content: space-between;
-
-  margin-top: 72px;
+  gap: 24px;
 }
 
 .client-list-link {
+  color: #8e8f99;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -458,12 +462,13 @@ button {
 }
 
 .client-list-icon {
-  fill: #8e8f99;
+  fill: currentColor;
 }
 
 .client-list-link:hover,
 .client-list-link:focus {
   border: 1px solid #404bbf;
+  color: #404bbf;
 }
 .client-list-link:hover .client-list-icon,
 .client-list-link:focus .client-list-icon {
@@ -477,7 +482,7 @@ button {
 }
 
 .media {
-  margin-left: 120px;
+  margin-right: 120px;
 }
 
 .footer-media-list {
@@ -498,6 +503,11 @@ button {
 .footer-media-link:focus {
   background-color: var(--success);
 }
+
+.footer-media-icon {
+  fill: var(--secondary-bg-color);
+}
+
 .footer-media-title {
   font-family: 'Roboto', sans-serif;
   font-style: normal;
@@ -562,6 +572,8 @@ button {
 .buttons-item:hover,
 .buttons-item:focus {
   border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .buttons .list:hover,
 .buttons .list:focus {
@@ -623,7 +635,14 @@ button {
   margin-top: 8px;
   margin-left: 16px;
 }
-
+.portfolio-list {
+  display: block;
+}
+.portfolio-list:hover,
+.portfolio-list:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 .add-container {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
